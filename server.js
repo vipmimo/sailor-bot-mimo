@@ -6,7 +6,7 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT);
 setInterval(() => {
-    http.get(`http://villager.glitch.me/`);
+    http.get(`http://mimo4gaming.glitch.me/`);
 }, 280000);
 
 const {
@@ -91,8 +91,8 @@ const cools = [];
 let sfa = JSON.parse(fs.readFileSync('./sfa.json', 'utf8')); // الملف الي بتحط به الحسابات الفل داتا
 let nfa = JSON.parse(fs.readFileSync('./nfa.json', 'utf8')); // الملف الي بتحط به الحسابات العاديه
 let SFAP = 8000; /*سعر الحساب الواحد الفل داتا*/
-let NFAP = 1; /*سعر الحساب الواحد العادي*/
-let URID = '635933198035058700' //مين بيتحوله الكريديت
+let NFAP = 2000; /*سعر الحساب الواحد العادي*/
+let URID = '717128467677708408' //مين بيتحوله الكريديت
 client.on('message', async message => { 
     let bOn = await db.fetch(`bOn_${message.guild.id}`)
     if (message == prefix + 'stock') {
@@ -109,7 +109,7 @@ client.on('message', async message => {
             if (!acc.email) return;
             hossam++;
         }); 
-        message.channel.send(new Discord.RichEmbed().setTitle('💵 villager 💵') ///1
+        message.channel.send(new Discord.RichEmbed().setTitle('💵 mimo4gaming 💵') ///1
             .addField('**[SFA | فل داتا] > **', `**${ahmed} Account(s)**`, true).addField('**[NFA | عادي] > **', `**${hossam} Account(s)  **`, true).setColor('GREEN') 
             .addField('**هل تعلم ؟**', `**\`[SFA]\` > فل داتا - حساب يمكنك اللعب وتغيير الاسم والباسوورد والسكن
 \`[NFA]\` > العادي = حساب لا يمكنك تغيير اي شيئ فيه, للعب فقط**`) 
